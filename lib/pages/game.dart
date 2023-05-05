@@ -1,7 +1,11 @@
+import 'package:assassino_detetive_vitima/constants.dart';
+import 'package:assassino_detetive_vitima/services/open_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class Game extends StatefulWidget {
-  Game({Key? key}) : super(key: key);
+  const Game({Key? key}) : super(key: key);
 
   @override
   State<Game> createState() => _GameState();
@@ -10,6 +14,39 @@ class Game extends StatefulWidget {
 class _GameState extends State<Game> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: kBgColor,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+            icon: const Icon(LineAwesomeIcons.angle_left),
+            onPressed: () {
+              openDialog(context);
+            }),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child:
+            Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+          Center(
+            child: Text(kHomeText1,
+                style: GoogleFonts.lato(
+                  fontSize: 22,
+                  color: kLightColor,
+                  fontWeight: FontWeight.bold,
+                )),
+          ),
+          Center(
+            child: Text(kHomeText1,
+                style: GoogleFonts.lato(
+                  fontSize: 22,
+                  color: kLightColor,
+                  fontWeight: FontWeight.bold,
+                )),
+          ),
+        ]),
+      ),
+    );
   }
 }

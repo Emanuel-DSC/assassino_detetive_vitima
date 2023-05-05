@@ -1,18 +1,21 @@
+import 'package:assassino_detetive_vitima/pages/game.dart';
+import 'package:assassino_detetive_vitima/services/raffle.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:numberpicker/numberpicker.dart';
 import '../constants.dart';
+import '../widgets/my_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  static int players = 4;
 
   @override
   State<HomePage> createState() => _TimerPickerState();
 }
 
 class _TimerPickerState extends State<HomePage> {
-  int players = 4;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,14 +40,14 @@ class _TimerPickerState extends State<HomePage> {
                     axis: Axis.horizontal,
                     minValue: 4,
                     maxValue: 20,
-                    value: players,
+                    value: HomePage.players,
                     zeroPad: true,
                     infiniteLoop: true,
                     itemWidth: 80,
                     itemHeight: 60,
                     onChanged: (value) {
                       setState(() {
-                        players = value;
+                        HomePage.players = value;
                       });
                     },
                     textStyle:
@@ -64,22 +67,13 @@ class _TimerPickerState extends State<HomePage> {
                 ],
               ),
             ),
-            GestureDetector(
-                onTap: () {},
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: kAccentColor,
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Text('jogar'.toUpperCase(),
-                      style: GoogleFonts.lato(
-                        fontSize: 16,
-                        color: kBgColor,
-                        fontWeight: FontWeight.bold,
-                      )),
-                )),
+            MyButton(
+              onTap: () {
+                raffle();
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Game()));
+              },
+            ),
           ],
         ),
       ),

@@ -4,6 +4,13 @@ import 'package:flutter/material.dart';
 Color kBgColor = const Color(0xFF111318);
 Color kAccentColor = const Color(0xFF6294DC);
 Color kLightColor = const Color(0xFFECECEC);
+Color kAlertDialogColor = const Color(0xFF1F2126);
 
 //Home Text
 String kHomeText1 = 'nº de jogadores:'.toUpperCase();
+
+//Alert dialog 
+String kAlertText1 = 'tem certeza?'.toUpperCase();
+String kAlertText2 = 'Voltar para a página inicial irá reiniciar o seu progresso';
+String kAlertText3 = 'Confirmar';
+String kAlertText4 = 'Cancelar';
