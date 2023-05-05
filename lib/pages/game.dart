@@ -1,17 +1,17 @@
 import 'package:assassino_detetive_vitima/constants.dart';
 import 'package:assassino_detetive_vitima/services/list_manipulation.dart';
 import 'package:assassino_detetive_vitima/services/open_dialog.dart';
+import 'package:assassino_detetive_vitima/services/raffle_visibility.dart';
 import 'package:assassino_detetive_vitima/widgets/my_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
-import 'home.dart';
-
 class Game extends StatefulWidget {
   const Game({Key? key}) : super(key: key);
 
-  static String buttonText = 'Confirmar';
+  static String buttonText = 'Revelar';
+  static bool isVisible = false;
 
   @override
   State<Game> createState() => _GameState();
@@ -33,7 +33,8 @@ class _GameState extends State<Game> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        child:
+            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           Center(
             child: Text(kHomeText1,
                 style: GoogleFonts.lato(
@@ -42,13 +43,16 @@ class _GameState extends State<Game> {
                   fontWeight: FontWeight.bold,
                 )),
           ),
-          Center(
-            child: Text(roles.toString(),
-                style: GoogleFonts.lato(
-                  fontSize: 22,
-                  color: kLightColor,
-                  fontWeight: FontWeight.bold,
-                )),
+          Visibility(
+            visible: Game.isVisible,
+            child: Center(
+              child: Text(roles.toString(),
+                  style: GoogleFonts.lato(
+                    fontSize: 22,
+                    color: kLightColor,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ),
           ),
           MyButton(
               text: Game.buttonText,
@@ -57,7 +61,7 @@ class _GameState extends State<Game> {
                   if (mainList.isEmpty) {
                     reset(context);
                   } else {
-                    raffle(context);
+                    visible(context); 
                   }
                 });
               }),

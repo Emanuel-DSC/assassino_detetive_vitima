@@ -15,7 +15,7 @@ void add() {
   mainList.add('assassino');
 }
 
-void raffle(context) {
+void raffle(context) async {
   supportRoles = (mainList..shuffle()).last;
   supportList.add(supportRoles);
   roles = supportRoles;
@@ -23,8 +23,6 @@ void raffle(context) {
 
   if (mainList.isEmpty) {
     Game.buttonText = 'Reiniciar';
-  } else {
-    Game.buttonText = 'Confirmar';
   }
 }
 
@@ -34,4 +32,5 @@ void reset(context) {
   supportList = [];
   Navigator.push(
       context, MaterialPageRoute(builder: (context) => const HomePage()));
+  Game.buttonText = 'Revelar';
 }
