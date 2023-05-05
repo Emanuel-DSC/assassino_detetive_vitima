@@ -1,6 +1,7 @@
 import 'package:assassino_detetive_vitima/pages/game.dart';
 import 'package:assassino_detetive_vitima/pages/home.dart';
 import 'package:flutter/material.dart';
+import '../constants.dart';
 
 String roles = '';
 String supportRoles = '';
@@ -22,7 +23,7 @@ void raffle(context) async {
   mainList.remove(supportRoles);
 
   if (mainList.isEmpty) {
-    Game.buttonText = 'Reiniciar';
+    Game.buttonText = kButtonText3;
   }
 }
 
@@ -32,5 +33,6 @@ void reset(context) {
   supportList = [];
   Navigator.push(
       context, MaterialPageRoute(builder: (context) => const HomePage()));
-  Game.buttonText = 'Revelar';
+  Game.buttonText = kButtonText2;
+  Game.isVisible = false;
 }

@@ -14,3 +14,11 @@ String kAlertText1 = 'tem certeza?'.toUpperCase();
 String kAlertText2 = 'Voltar para a página inicial irá reiniciar o seu progresso';
 String kAlertText3 = 'Confirmar';
 String kAlertText4 = 'Cancelar';
+
+//Button text 
+String kButtonText = 'Confirmar';
+String kButtonText2 = 'Revelar';
+String kButtonText3 = 'Reiniciar';
+
+//Game text
+String kGameText = 'voce é:'.toUpperCase();

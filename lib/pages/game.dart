@@ -36,7 +36,7 @@ class _GameState extends State<Game> {
         child:
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           Center(
-            child: Text(kHomeText1,
+            child: Text(kGameText,
                 style: GoogleFonts.lato(
                   fontSize: 22,
                   color: kLightColor,
