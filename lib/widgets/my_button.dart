@@ -6,9 +6,11 @@ import '../constants.dart';
 class MyButton extends StatelessWidget {
 
   final VoidCallback onTap;
+  final String text;
 
   const MyButton({
     required this.onTap,
+    required this.text,
     super.key,
   });
 
@@ -23,7 +25,7 @@ class MyButton extends StatelessWidget {
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.circular(8),
           ),
-          child: Text('jogar'.toUpperCase(),
+          child: Text(text.toUpperCase(),
               style: GoogleFonts.lato(
                 fontSize: 16,
                 color: kBgColor,

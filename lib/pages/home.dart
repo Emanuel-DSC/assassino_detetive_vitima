@@ -1,5 +1,5 @@
 import 'package:assassino_detetive_vitima/pages/game.dart';
-import 'package:assassino_detetive_vitima/services/raffle.dart';
+import 'package:assassino_detetive_vitima/services/list_manipulation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:numberpicker/numberpicker.dart';
@@ -68,8 +68,9 @@ class _TimerPickerState extends State<HomePage> {
               ),
             ),
             MyButton(
+              text: 'Jogar',
               onTap: () {
-                raffle();
+                add();
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const Game()));
               },
