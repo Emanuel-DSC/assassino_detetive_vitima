@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //Colors
 Color kBgColor = const Color(0xFF111318);
 Color kAccentColor = const Color(0xFF6294DC);
+Color kResetColor = const Color(0xFFDC7F62);
 Color kLightColor = const Color(0xFFECECEC);
 Color kAlertDialogColor = const Color(0xFF1F2126);
 
@@ -21,4 +22,4 @@ String kButtonText2 = 'Revelar';
 String kButtonText3 = 'Reiniciar';
 
 //Game text
-String kGameText = 'voce é:'.toUpperCase();
+String kGameText = 'Passe o celular para o próximo jogador';

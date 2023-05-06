@@ -35,18 +35,10 @@ class _GameState extends State<Game> {
         padding: const EdgeInsets.all(8.0),
         child:
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          Center(
-            child: Text(kGameText,
-                style: GoogleFonts.lato(
-                  fontSize: 22,
-                  color: kLightColor,
-                  fontWeight: FontWeight.bold,
-                )),
-          ),
           Visibility(
             visible: Game.isVisible,
             child: Center(
-              child: Text(roles.toString(),
+              child: Text(roles.toString().toUpperCase(),
                   style: GoogleFonts.lato(
                     fontSize: 22,
                     color: kLightColor,
@@ -54,17 +46,38 @@ class _GameState extends State<Game> {
                   )),
             ),
           ),
-          MyButton(
-              text: Game.buttonText,
-              onTap: () {
-                setState(() {
-                  if (mainList.isEmpty) {
-                    reset(context);
-                  } else {
-                    visible(context); 
-                  }
-                });
-              }),
+          Visibility(
+            visible: Game.isVisible,
+            child: Center(
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.asset(imgRole)),
+            ),
+          ),
+          Visibility(
+            visible: Game.isVisible,
+            child: Center(
+                child: Text(kGameText.toString(),
+                    style: GoogleFonts.lato(
+                      fontSize: 22,
+                      color: kLightColor,
+                      fontWeight: FontWeight.bold,
+                    )),
+              ),
+          ),
+          Center(
+            child: MyButton(
+                text: Game.buttonText,
+                onTap: () {
+                  setState(() {
+                    if (mainList.isEmpty) {
+                      reset(context);
+                    } else {
+                      visible(context);
+                    }
+                  });
+                }),
+          ),
         ]),
       ),
     );
