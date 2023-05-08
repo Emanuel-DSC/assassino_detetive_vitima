@@ -35,8 +35,10 @@ class _GameState extends State<Game> {
         padding: const EdgeInsets.all(8.0),
         child:
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          Visibility(
-            visible: Game.isVisible,
+          AnimatedOpacity(
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.fastOutSlowIn,
+            opacity: Game.isVisible ? 1 : 0,
             child: Center(
               child: Text(roles.toString().toUpperCase(),
                   style: GoogleFonts.lato(
@@ -46,16 +48,20 @@ class _GameState extends State<Game> {
                   )),
             ),
           ),
-          Visibility(
-            visible: Game.isVisible,
+          AnimatedOpacity(
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.fastOutSlowIn,
+            opacity: Game.isVisible ? 1 : 0,
             child: Center(
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.asset(imgRole)),
             ),
           ),
-          Visibility(
-            visible: Game.isVisible,
+          AnimatedOpacity(
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.fastOutSlowIn,
+            opacity: Game.isVisible ? 1 : 0,
             child: Center(
                 child: Text(kGameText.toString(),
                 textAlign: TextAlign.center,
