@@ -58,6 +58,7 @@ class _GameState extends State<Game> {
             visible: Game.isVisible,
             child: Center(
                 child: Text(kGameText.toString(),
+                textAlign: TextAlign.center,
                     style: GoogleFonts.lato(
                       fontSize: 22,
                       color: kLightColor,

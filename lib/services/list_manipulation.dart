@@ -49,6 +49,6 @@ void reset(context) {
   Game.buttonText = kButtonText2;
   Game.isVisible = false;
   MyButton.buttonColor = kAccentColor;
-  kGameText = 'Passe o celular para o próximo jogador';
+  kGameText = 'Passe o celular\npara o próximo jogador';
 
 }

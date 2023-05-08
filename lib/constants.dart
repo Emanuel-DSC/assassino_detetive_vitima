@@ -22,4 +22,4 @@ String kButtonText2 = 'Revelar';
 String kButtonText3 = 'Reiniciar';
 
 //Game text
-String kGameText = 'Passe o celular para o próximo jogador';
+String kGameText = 'Passe o celular\npara o próximo jogador';
