@@ -28,7 +28,7 @@ class _GameState extends State<Game> {
         leading: IconButton(
             icon: const Icon(LineAwesomeIcons.angle_left),
             onPressed: () {
-              openDialog(context);
+              openGameDialog(context);
             }),
       ),
       body: Padding(

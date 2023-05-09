@@ -40,7 +40,7 @@ void raffle(context) async {
   }
 }
 
-void reset(context) {
+reset(context) {
   roles = '';
   supportRoles = '';
   supportList = [];

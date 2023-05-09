@@ -11,10 +11,11 @@ Color kAlertDialogColor = const Color(0xFF1F2126);
 String kHomeText1 = 'nº de jogadores:'.toUpperCase();
 
 //Alert dialog 
-String kAlertText1 = 'tem certeza?'.toUpperCase();
-String kAlertText2 = 'Voltar para a página inicial irá reiniciar o seu progresso';
-String kAlertText3 = 'Confirmar';
-String kAlertText4 = 'Cancelar';
+String kAlertTitleText = 'tem certeza?'.toUpperCase();
+String kAlertContentText = 'Voltar para a página inicial irá reiniciar o seu progresso';
+String kAlertContentText2 = 'Deseja sair do aplicativo?';
+String kAlertPositiveText = 'Confirmar';
+String kAlertNegativeText = 'Cancelar';
 
 //Button text 
 String kButtonText = 'Confirmar';

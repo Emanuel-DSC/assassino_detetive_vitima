@@ -4,31 +4,34 @@ import '../constants.dart';
 
 // ignore: must_be_immutable
 class MyAlertDialog extends StatelessWidget {
-  VoidCallback onTap; 
-  VoidCallback onTap2; 
+  VoidCallback onTap;
+  VoidCallback onTap2;
+  String contentText;
 
   MyAlertDialog({
     Key? key,
     required this.onTap,
     required this.onTap2,
+    required this.contentText,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text(kAlertText1.toUpperCase(),
+      title: Text(kAlertTitleText.toUpperCase(),
           style: GoogleFonts.lato(
               color: Colors.white, fontWeight: FontWeight.bold)),
-      content: Text(kAlertText2, style: GoogleFonts.lato(color: Colors.white)),
+      content:
+          Text(contentText, style: GoogleFonts.lato(color: Colors.white)),
       actions: [
         TextButton(
           onPressed: onTap,
-          child: Text(kAlertText3,
+          child: Text(kAlertPositiveText,
               style: GoogleFonts.lato(color: Colors.white)),
         ),
         TextButton(
           onPressed: onTap2,
-          child: Text(kAlertText4,
+          child: Text(kAlertNegativeText,
               style: GoogleFonts.lato(color: Colors.white)),
         ),
       ],
