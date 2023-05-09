@@ -44,11 +44,11 @@ reset(context) {
   roles = '';
   supportRoles = '';
   supportList = [];
+  mainList = []; 
   Navigator.push(
       context, MaterialPageRoute(builder: (context) => const HomePage()));
   Game.buttonText = kButtonText2;
   Game.isVisible = false;
   MyButton.buttonColor = kAccentColor;
   kGameText = 'Passe o celular\npara o próximo jogador';
-
 }

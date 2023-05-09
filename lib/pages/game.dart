@@ -63,14 +63,14 @@ class _GameState extends State<Game> {
             curve: Curves.fastOutSlowIn,
             opacity: Game.isVisible ? 1 : 0,
             child: Center(
-                child: Text(kGameText.toString(),
-                textAlign: TextAlign.center,
-                    style: GoogleFonts.lato(
-                      fontSize: 22,
-                      color: kLightColor,
-                      fontWeight: FontWeight.bold,
-                    )),
-              ),
+              child: Text(kGameText.toString(),
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.lato(
+                    fontSize: 22,
+                    color: kLightColor,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ),
           ),
           Center(
             child: MyButton(
