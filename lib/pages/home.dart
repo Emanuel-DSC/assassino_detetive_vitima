@@ -77,6 +77,23 @@ class _TimerPickerState extends State<HomePage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const Game()));
                 },
+              ), Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('nao sabe jogar?',
+                  style: GoogleFonts.lato(
+                    fontSize: 14,
+                    color: kLightColor,
+                  )),
+                  TextButton(
+                    onPressed: (){
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const Game()));
+                    },
+                    child: Text(
+                      'clique aqui'
+                    )),
+                ],
               ),
             ],
           ),
