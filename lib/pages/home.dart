@@ -3,9 +3,10 @@ import 'package:assassino_detetive_vitima/services/list_manipulation.dart';
 import 'package:assassino_detetive_vitima/services/will_pop_scope.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:numberpicker/numberpicker.dart';
 import '../constants.dart';
 import '../widgets/my_button.dart';
+import '../widgets/number_picker.dart';
+import 'tutorial.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -29,47 +30,13 @@ class _TimerPickerState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(kHomeText1,
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.lato(
                     fontSize: 22,
                     color: kLightColor,
                     fontWeight: FontWeight.bold,
                   )),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    NumberPicker(
-                      axis: Axis.horizontal,
-                      minValue: 4,
-                      maxValue: 20,
-                      value: HomePage.players,
-                      zeroPad: true,
-                      infiniteLoop: true,
-                      itemWidth: 80,
-                      itemHeight: 60,
-                      onChanged: (value) {
-                        setState(() {
-                          HomePage.players = value;
-                        });
-                      },
-                      textStyle:
-                          const TextStyle(color: Colors.grey, fontSize: 20),
-                      selectedTextStyle:
-                          TextStyle(color: kAccentColor, fontSize: 30),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: kLightColor,
-                          width: 1.5,
-                        ),
-                        borderRadius: const BorderRadius.all(Radius.circular(
-                                8.0) //                 <--- border radius here
-                            ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              const PlayersNumber(),
               MyButton(
                 text: 'Jogar',
                 onTap: () {
@@ -77,22 +44,29 @@ class _TimerPickerState extends State<HomePage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const Game()));
                 },
-              ), Row(
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('nao sabe jogar?',
-                  style: GoogleFonts.lato(
-                    fontSize: 14,
-                    color: kLightColor,
-                  )),
+                  Text(kGameText2,
+                      style: GoogleFonts.lato(
+                        fontSize: 16,
+                        color: kLightColor,
+                      )),
                   TextButton(
-                    onPressed: (){
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const Game()));
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Tutorial()));
                     },
-                    child: Text(
-                      'clique aqui'
-                    )),
+                    child: Text(kGameText3,
+                        style: GoogleFonts.lato(
+                          fontSize: 16,
+                          color: kAccentColor,
+                          fontWeight: FontWeight.w700
+                        )),
+                  ),
                 ],
               ),
             ],
@@ -102,3 +76,4 @@ class _TimerPickerState extends State<HomePage> {
     );
   }
 }
+
