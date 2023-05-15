@@ -24,7 +24,7 @@
 <br>
 
 ## Sobre
-Esse aplicativo substitui o tradicional papel e caneta para jogar "Assassino, detetive e vítima". Ele gera automaticamente o número de vítimas necessárias para a quantidade de jogadores escolhidos e então sorteia o número X de vítimas + 1 assassino + 1 detetive. O jogador revela sua função e confirma, escondendo-a. Após isso é só passar o celular para o próximo jogador que repetirá o processo até que a última pessoa saiba qual a sua função, assim iniciando a rodada.
+Esse aplicativo substitui o tradicional papel e caneta para jogar "Assassino, detetive e vítima". Ele gera automaticamente o número de vítimas necessárias para a quantidade de jogadores escolhidos e então sorteia o número X de vítimas + 1 assassino + 1 detetive. O jogador descobre sua função e confirma, escondendo-a. Após isso é só passar o celular para o próximo jogador que repetirá o processo até que a última pessoa saiba qual a sua função, assim iniciando a rodada.
 
 ## Por que ? 
 Recém mudado, fui jogar com uns amigos porém não encontramos papel e caneta. Tive então a idéia de desenvolver esse app para resolver esse problema e adicionar ao meu portfólio. Então todo feedback é válido.
