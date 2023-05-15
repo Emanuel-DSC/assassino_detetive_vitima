@@ -2,7 +2,7 @@
 
 ### Video
 
-* Video link: https://youtu.be/upEzJRSfOSY
+* Link do vídeo: https://youtu.be/upEzJRSfOSY
 <br> 
 
 <div>
