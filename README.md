@@ -32,7 +32,6 @@ Recém mudado, fui jogar com uns amigos porém não encontramos papel e caneta. 
 email: emanuelldsc@gmail.com
 
 ## Instalar
-Se você quiser testá-lo, aqui estão os links:
+Se você quiser testá-lo:
 
 Android .apk: [app-armeabi-v7a-release.zip](https://github.com/Emanuel-DSC/assassino_detetive_vitima/files/11482512/app-armeabi-v7a-release.zip)
-iOS .ipa: Soon!
